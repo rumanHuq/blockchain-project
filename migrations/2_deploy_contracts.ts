@@ -1,8 +1,9 @@
+type Network = "development" | "kovan" | "mainnet";
 
-export default function deployContracts(artifacts: Truffle.Artifacts, _web3: Web3) {
+export default function deployContracts(artifacts: Truffle.Artifacts, web3: Web3) {
   return async (
     deployer: Truffle.Deployer,
-    network: "development" | "kovan" | "mainnet",
+    network: Network,
     accounts: string[]
   ) => {
     const ConvertLib = artifacts.require("ConvertLib");

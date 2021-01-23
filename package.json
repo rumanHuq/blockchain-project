@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate-types": "npx typechain --target=truffle-v5 'build/contracts/*.json'",
+    "generate-types": "npx typechain --target=truffle-v5 'src/abis/*.json' --outDir @types/",
     "postinstall": "npx truffle compile && npm run generate-types"
   },
   "keywords": [],

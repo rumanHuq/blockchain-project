@@ -1,5 +1,5 @@
 const Migrations = artifacts.require("Migrations");
 
-export default function initialMigration(deployer: Truffle.Deployer) {
+export default function truffleConfig(deployer: Truffle.Deployer) {
   deployer.deploy(Migrations);
 };
